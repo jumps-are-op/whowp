@@ -1,0 +1,25 @@
+icons yes
+infile "./info"
+timeformat 12
+dateformat "%a, %b %d %Y"
+dateformat_cfg "mm/dd/yyyy"
+category "test:blue" "test2"
+custom 1 '
+cat <<-_EOF_
+A custom section test
+---------------------
+Kernel : Linux 5.18.14-gnu-1
+Arch   : x86_64
+_EOF_
+'
+format \
+"separator:0" \
+"separator:1" \
+"separator:2" \
+"separator:3" \
+"date" \
+"calendar" \
+"important" \
+"todos" \
+"events" \
+"custom:1"

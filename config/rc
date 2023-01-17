@@ -1,0 +1,81 @@
+# Example Whowp Configuration
+# This works like a normal shell script, so quote anything with space, and use backslash to prevent expansion (or use single quotes).
+
+## Options
+
+# Enable icons (could be emojis)
+icons yes
+
+# File for the to-do's, events, and schedules
+infile "$HOME/.config/whow/info"
+
+# Time format for writing to-do's, schedules, and printing in a pretty format
+# Can be set to 12[h] (AM/PM) or 24[h].
+# Example of writing in 12h format: 01:12 PM
+# And in 24h format: 13:12
+timeformat 12
+
+# Date format for printing (you might want it to be more human-readable)
+# Check the format at date(1) manual page or run `info date` if you have texinfo installed.
+# The format below is the default and will print something like "Sun, 20 April 2022".
+dateformat "%a, %b %d %Y"
+
+# Date format for writing, below is the default.
+# Can be mm/dd/yyyy, dd/mm/yyyy, dd/mm, or mm/dd. 
+dateformat_cfg dd/mm/yyyy
+
+# Categories
+# This can also be used for some other stuff like priority.
+# Note: A builtin categories @important and @done will be added by default.
+# You can also assign colors to them (only works with 256 colors/true color capable terminal):
+# Which will used when a todo duo time have been passed (default is red
+category "art:blue" "programming:yellow" "asap:red" "fun:purple" "school:pink"
+# Available colors are (d is suffix for dark and l for light):
+# dred, dgreen, orange, dblue, purple (or magenta), dcyan, gray,
+# red, green, yellow, blue, pink, lblue (or cyan)
+
+
+## Formatting
+
+# Available sections:
+# date, separator:n, calendar, todos, events, important, custom:n
+
+# Separator 1 looks like this:
+# ———————————————————————
+#
+# 2 looks like this:
+# =======================
+#
+# 3 looks like this:
+# ~~~~~~~~~~~~~~~~~~~~~~~
+#
+# and 0 will just print a new line.
+
+format \
+	"separator:1" \
+	"date" \
+	"separator:1" \
+	"calendar" \
+	"separator:2" \
+	"important" \
+	"todos" \
+	"separator:2" \
+	"events" \
+	"separator:2" \
+	"schedule"
+# For the custom section, define your own in this file (doesn't matter where),
+# or source it from other file
+
+# Here's an example (this will be custom:1):
+#custom 1 '
+#echo "Host: $(hostname)"
+#echo "Uptime: $(uptime --pretty)"
+#'
+
+# Another one with only one command:
+#custom 1 afetch
+
+# Also, you can assign a string instead to a custom section key
+# so custom:weather would work too.
+
+# vim: ft=sh

@@ -1,0 +1,30 @@
+# If you want to start a text with a @ use \ to escape it
+# date/time format: 07/23/2022 or 07/23, 07:00 AM (12h) or 07:00 (24h)
+# NOTE: You can only escape at the start of a word
+# e.g.
+# A      text with only 1 space between words
+# A \ text with 2 spaces between words
+# A text\ with 1 spaces between words and a slash at the end of a word
+# A \\text with a backslash at the start of a word
+# A te\xt with a backslash at the middle of a word
+# A \\ text with a backslash alone as a word
+#
+# A \@text with a @ at the start of a word
+# A te@xt with a @ at the middle of a word
+# A @ text with a @ alone as a word
+
+# To-do's
+# Format: todo [@date] [@time] todo [@category]...
+todo A to-do
+todo An &important to-do
+
+# Events
+# Format: event @date <name> [@category]...
+# The date is written with format defined on dateformat_cfg.
+event @23/3 Ramadan starts
+event @12/7 My finals @studying
+
+# Schedules
+# Format: sched @day @start_time [@end_time (@% for none)] <name> [@category]
+sched @ev @06:00 AM @% Wake up
+sched @we @06:00 PM @08:00 PM Work on my code
