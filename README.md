@@ -9,6 +9,6 @@ the only differences are
 	which works same as events' `add` and `del`
 
 ## To-Do's (How Ironic)
-[ ] Fix coloring of events/schedules/to-dos when important and a tag
-	without any colors
-[ ] Fix schedules displaying
+- [X] Fix coloring of events/schedules/to-dos when important and a tag
+	without any colors  
+- [X] Fix schedules displaying  
