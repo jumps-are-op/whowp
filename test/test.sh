@@ -1,4 +1,4 @@
-#!/bin/dash
+#!/bin/sh
 
 # Made by daringcuteseal (also known as Pearl)
 # Modified by jumps are op (jumpsareop@gmail.com) to work on a POSIX™ /bin/sh

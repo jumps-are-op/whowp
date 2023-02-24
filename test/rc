@@ -8,7 +8,7 @@ custom 1 '
 cat <<-_EOF_
 A custom section test
 ---------------------
-Kernel : Linux 5.18.14-gnu-1
+Kernel : Linux 6.1.5-gnu-1
 Arch   : x86_64
 _EOF_
 '
