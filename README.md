@@ -12,3 +12,4 @@ the only differences are
 - [ ] Fix coloring of events/schedules/to-dos when important and a tag
 	without any colors  
 - [ ] Fix schedules displaying  
+- [ ] Make a devlog-like blog about this shit
