@@ -328,7 +328,8 @@ printimportant(){
 
 	EOF
 	index=1
-	grep "^ *todo " <"$1" | while read -r line;do
+	# shellcheck disable=SC2162
+	grep "^ *todo " <"$1" | while read line;do
 		line=${line%%#*}' '
 		line=${line#todo }
 		tags="" date="" time="" todo="" tag=""
@@ -404,7 +405,8 @@ printtodos(){
 
 	EOF
 	index=1
-	grep "^ *todo " <"$1" | while read -r line;do
+	# shellcheck disable=SC2162
+	grep "^ *todo " <"$1" | while read line;do
 		line=${line%%#*}' '
 		line=${line#todo }
 		tags="" date="" time="" todo="" tag=""
@@ -479,7 +481,8 @@ printevents(){
 
 	EOF
 	index=1
-	grep "^ *event " <"$1" | while read -r line;do
+	# shellcheck disable=SC2162
+	grep "^ *event " <"$1" | while read line;do
 		line=${line%%#*}' '
 		line=${line#event }
 		tags="" date="" time="" event=""
@@ -536,7 +539,8 @@ printschedules(){
 
 	EOF
 	index=1
-	grep "^ *sched " <"$1" | while read -r line;do
+	# shellcheck disable=SC2162
+	grep "^ *sched " <"$1" | while read line;do
 		line=${line%%#*}' '
 		line=${line#sched }
 		tags="" date="" sched="" tag="" starttime="" endtime=""
@@ -585,9 +589,12 @@ printschedules(){
 			mon)printf Monday;;
 			thu)printf Thursday;;
 			wed)printf Wednesday;;
-			thu)printf Tuesday;;
+			tue)printf Tuesday;;
 			fri)printf Friday;;
 			sat)printf Saturdays;;
+			ev)printf Every\ day;;
+			wd)printf Week\ days;;
+			we)printf Week\ end;;
 			*);;
 		esac
 		printf %s " $starttime "
