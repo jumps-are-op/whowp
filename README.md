@@ -2,7 +2,7 @@
 
 This a rewrite (mostly) of
 [whow](https://github.com/daringcuteseal/whow)
-the only differences are
+the main differences are
 
 * Configs are now only 2 files
 * new schedule subcommands `add` and `del`,
