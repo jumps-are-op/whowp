@@ -2,24 +2,15 @@ icons yes
 infile "./info"
 timeformat 12
 dateformat "%a, %b %d %Y"
-dateformat_cfg "mm/dd/yyyy"
+dateformat_cfg "dd/mm/yyyy"
 category "test:blue" "test2"
 custom 1 '
 cat <<-_EOF_
 A custom section test
 ---------------------
-Kernel : Linux 6.1.5-gnu-1
-Arch   : x86_64
+Kernel : $(uname -s) $(uname -r)
+Arch   : $(uname -m)
 _EOF_
 '
-format \
-"separator:0" \
-"separator:1" \
-"separator:2" \
-"separator:3" \
-"date" \
-"calendar" \
-"important" \
-"todos" \
-"events" \
-"custom:1"
+format "separator:0" "separator:1" "separator:2" "separator:3" \
+"date" "calendar" "important" "todos" "events" "scheds" "custom:1"
